@@ -46,6 +46,20 @@ namespace AppiumForAndroid
 			Console.WriteLine(list);
 		}
 
+		[TestMethod]
+		public void AddOneSet()
+		{
+			AndroidDriver<AppiumWebElement> driver = StartApp();
+
+			var el1 = driver.FindElement(MobileBy.Id("button_toggle_volume"));
+			el1.Click();
+
+			var setNumber = driver.FindElement(MobileBy.Id("edit_number_sets"));
+			var numberOfSets = setNumber.Text;
+			var expectedSetNumber = "3";
+			Assert.IsTrue(numberOfSets == expectedSetNumber);
+		}
+
 		private AndroidDriver<AppiumWebElement> StartApp()
 		{
 			System.Environment.SetEnvironmentVariable("ANDROID_HOME", @"C:\Users\marko\AppData\Local\Android\Sdk");
