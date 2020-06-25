@@ -63,7 +63,7 @@ namespace AppiumForAndroid
 			Console.WriteLine($"package path: {packagePath}");
 			cappabilities.AddAdditionalCapability(MobileCapabilityType.App, packagePath);
 
-			cappabilities.AddAdditionalCapability(AndroidMobileCapabilityType.AppPackage, "Interval Timer_v2.2.2_apkpure.com");
+			cappabilities.AddAdditionalCapability(AndroidMobileCapabilityType.AppPackage, "cc.dreamspark.intervaltimer");
 			cappabilities.AddAdditionalCapability(AndroidMobileCapabilityType.AppActivity, ".MainActivity");
 
 			var serveroptions = new OptionCollector();
